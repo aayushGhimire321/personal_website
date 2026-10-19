@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  }
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+html.dark ::-webkit-scrollbar-track {
+  background: #09090b;
+}
+html.dark ::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 4px;
+}
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
+
+html.light ::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+html.light ::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+html.light ::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* ==========================================================================
+   Dedicated Print Stylesheet for PDF & Paper Export
+   ========================================================================== */
+@media print {
+  @page {
+    margin: 12mm 14mm;
+    size: A4 portrait;
+  }
+
+  /* Force crisp black text on white canvas */
+  *,
+  *::before,
+  *::after {
+    background: transparent !important;
+    color: #0f172a !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  html,
+  body {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    font-size: 10.5pt !important;
+    line-height: 1.45 !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Hide interactive web UI, drawers, top navigation, search, and floaters */
+  header,
+  nav,
+  aside,
+  .print\\:hidden,
+  button,
+  input,
+  textarea,
+  select,
+  .no-print {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  /* Reset layout spacing for print flow */
+  main {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+
+  section {
+    padding-top: 1.25rem !important;
+    padding-bottom: 1.25rem !important;
+    border-bottom: 1px solid #cbd5e1 !important;
+    break-inside: auto !important;
+  }
+
+  /* Prevent page-break splits through cards, articles, and timeline items */
+  article,
+  .timeline-item,
+  .print-avoid-break,
+  blockquote {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    break-after: avoid !important;
+    page-break-after: avoid !important;
+    color: #020617 !important;
+    font-weight: 700 !important;
+  }
+
+  /* Clean print borders */
+  .border,
+  [class*="border-"] {
+    border-color: #cbd5e1 !important;
+  }
+
+  /* Images print cleanly without heavy dark filters */
+  img {
+    max-width: 100% !important;
+    filter: none !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  a {
+    text-decoration: none !important;
+    color: #0f172a !important;
+  }
+}
+
