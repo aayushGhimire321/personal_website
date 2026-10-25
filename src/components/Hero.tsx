@@ -14,6 +14,8 @@ import { PERSONAL_INFO } from '../data/portfolioData';
 import { useTheme } from '../context/ThemeContext';
 import { useLanguage } from '../context/LanguageContext';
 
+import aayushPortrait from "../assets/images/aayush_potrait.jpg";
+
 
 
 interface HeroProps {
@@ -176,7 +178,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenSeoStudio, onOpenResume }) => 
             }`}>
               <div className="relative aspect-square w-full overflow-hidden">
                 <img
-                  src="src/assets/images/aayush_portrait.jpg"
+                  src={aayushPortrait}
                   alt="Aayush Ghimire - Digital Marketing Executive"
                   className="w-full h-full object-cover object-top transition-transform duration-500 hover:scale-102"
                   referrerPolicy="no-referrer"
