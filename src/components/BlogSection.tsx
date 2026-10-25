@@ -165,7 +165,7 @@ export const BlogSection: React.FC = () => {
                   <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between text-xs text-neutral-300 font-mono">
                     <span className="flex items-center gap-1.5">
                       <Calendar className="w-3.5 h-3.5 text-amber-400" />
-                      <time itemProp="datePublished" dateTime={post.publishedDate}>
+                      <time itemProp="datePublished" dateTime={post.publishedDateISO}>
                         {post.publishedDate}
                       </time>
                     </span>
@@ -352,6 +352,7 @@ export const BlogSection: React.FC = () => {
 
                 <h1 
                   id="reader-article-title" 
+                  itemProp="headline"
                   className={`text-2xl sm:text-3xl font-extrabold leading-tight tracking-tight ${
                     isDark ? 'text-neutral-50' : 'text-slate-950'
                   }`}
@@ -375,6 +376,37 @@ export const BlogSection: React.FC = () => {
                     : 'border-amber-500 bg-amber-50/70 text-slate-800'
                 }`}>
                   {activeArticle.content.lead}
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className={`p-4 rounded-xl border ${
+                    isDark ? 'bg-neutral-950/60 border-neutral-800' : 'bg-slate-50 border-slate-200'
+                  }`}>
+                    <h2 className={`text-xs font-mono font-semibold uppercase tracking-wider mb-2 ${
+                      isDark ? 'text-amber-400' : 'text-amber-700'
+                    }`}>
+                      Best for
+                    </h2>
+                    <p className={`text-sm leading-relaxed ${
+                      isDark ? 'text-neutral-300' : 'text-slate-700'
+                    }`}>
+                      {activeArticle.audience}
+                    </p>
+                  </div>
+                  <div className={`p-4 rounded-xl border ${
+                    isDark ? 'bg-neutral-950/60 border-neutral-800' : 'bg-slate-50 border-slate-200'
+                  }`}>
+                    <h2 className={`text-xs font-mono font-semibold uppercase tracking-wider mb-2 ${
+                      isDark ? 'text-amber-400' : 'text-amber-700'
+                    }`}>
+                      Working toolkit
+                    </h2>
+                    <p className={`text-sm leading-relaxed ${
+                      isDark ? 'text-neutral-300' : 'text-slate-700'
+                    }`}>
+                      {activeArticle.tools.join(' · ')}
+                    </p>
+                  </div>
                 </div>
               </div>
 
@@ -413,6 +445,30 @@ export const BlogSection: React.FC = () => {
                     )}
                   </div>
                 ))}
+              </div>
+
+              <div className={`p-5 rounded-xl border ${
+                isDark ? 'bg-amber-400/5 border-amber-400/20' : 'bg-amber-50/70 border-amber-200'
+              }`}>
+                <h2 className={`text-sm font-bold mb-3 ${
+                  isDark ? 'text-amber-300' : 'text-amber-900'
+                }`}>
+                  Professional capabilities demonstrated
+                </h2>
+                <div className="flex flex-wrap gap-2">
+                  {activeArticle.professionalSignals.map((signal) => (
+                    <span
+                      key={signal}
+                      className={`px-2.5 py-1 rounded-md text-xs border ${
+                        isDark
+                          ? 'text-neutral-200 border-neutral-700 bg-neutral-900'
+                          : 'text-slate-700 border-amber-200 bg-white'
+                      }`}
+                    >
+                      {signal}
+                    </span>
+                  ))}
+                </div>
               </div>
 
               {/* Tag Cloud */}
