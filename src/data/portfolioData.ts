@@ -1,6 +1,6 @@
-import lodbodImage from "./assets/images/brand_campaign_lodbod_1792384749798.jpg";
-import softwaricaImage from "./assets/images/education_marketing_campaign_1792384748730.jpg";
-import digitalAdsImage from "./assets/images/digital_growth_ads_1792384749184.jpg";
+import lodbodImage from "../assets/images/brand_campaign_lodbod_1792384749798.jpg";
+import softwaricaImage from "../assets/images/education_marketing_campaign_1792384748730.jpg";
+import digitalAdsImage from "../assets/images/digital_growth_ads_1792384749184.jpg";
 
 export interface WorkExperience {
   id: string;
