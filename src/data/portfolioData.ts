@@ -1,3 +1,7 @@
+import lodbodImage from "./assets/images/brand_campaign_lodbod_1792384749798.jpg";
+import softwaricaImage from "./assets/images/education_marketing_campaign_1792384748730.jpg";
+import digitalAdsImage from "./assets/images/digital_growth_ads_1792384749184.jpg";
+
 export interface WorkExperience {
   id: string;
   role: string;
@@ -253,7 +257,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     client: "loard board / Lodbod Logistics",
     category: "Brand Strategy",
     period: "2026",
-    heroImage: "/src/assets/images/brand_campaign_lodbod_1792384749798.jpg",
+    heroImage: lodbodImage,
     summary: "Spearheaded the integrated brand positioning and B2B growth engine for a high-velocity digital logistics marketplace connecting cargo shippers with verified fleet operators.",
     problem: "Traditional logistics in Nepal relied on fragmented verbal broker channels, leading to high transaction costs and low shipper trust for app-based freight bookings.",
     strategy: [
@@ -279,7 +283,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     client: "Softwarica College of IT & E-Commerce (Coventry Univ Partner)",
     category: "Campus & Growth",
     period: "2025 - 2026",
-    heroImage: "/src/assets/images/education_marketing_campaign_1792384748730.jpg",
+    heroImage: softwaricaImage,
     summary: "Orchestrated multi-channel academic marketing campaigns, 100+ monthly counseling sessions, and large-scale IT career summits to fuel institutional recruitment.",
     problem: "Intense competitive pressure from dozens of local and foreign-affiliated IT colleges required differentiated marketing demonstrating real career outcomes.",
     strategy: [
@@ -305,7 +309,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     client: "Chautari Digitals & The Blessing Abroad Study",
     category: "Paid Ads & SEO",
     period: "2023 - 2025",
-    heroImage: "/src/assets/images/digital_growth_ads_1792384749184.jpg",
+    heroImage: digitalAdsImage,
     summary: "Engineered scalable Meta and Google Ads lead acquisition funnels combined with technical on-page SEO to drive high-intent student and customer inquiries.",
     problem: "Rising ad cost-per-click (CPC) and poor landing page conversion rates were draining marketing budgets without generating qualified sales leads.",
     strategy: [
