@@ -1,6 +1,10 @@
 import lodbodImage from "../assets/images/brand_campaign_lodbod_1792384749798.jpg";
 import softwaricaImage from "../assets/images/education_marketing_campaign_1792384748730.jpg";
 import digitalAdsImage from "../assets/images/digital_growth_ads_1792384749184.jpg";
+import blogSeoImage from "../assets/images/blog_seo_strategy_1792385872424.jpg";
+import blogAdsImage from "../assets/images/blog_paid_ads_funnel_1792385872670.jpg";
+import blogBrandImage from "../assets/images/blog_b2b_brand_positioning_1792385872838.jpg";
+import educationImage from "../assets/images/education_marketing_campaign_1792384748730.jpg";
 
 export interface WorkExperience {
   id: string;
@@ -429,7 +433,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "5 min read",
     publishedDate: "October, 2026",
     publishedDateISO: "2026-10-01",
-    coverImage: "/src/assets/images/blog_seo_strategy_1792385872424.jpg",
+    coverImage: blogSeoImage,
     tags: ["Technical SEO", "Core Web Vitals", "Semantic Search", "Schema.org"],
     audience: "Marketing leaders, founders, SEO specialists, and HR teams evaluating technical marketing capability.",
     tools: ["Google Search Console", "GA4", "PageSpeed Insights", "Screaming Frog", "Schema.org"],
@@ -492,7 +496,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "6 min read",
     publishedDate: "September, 2026",
     publishedDateISO: "2026-09-01",
-    coverImage: "/src/assets/images/blog_paid_ads_funnel_1792385872670.jpg",
+    coverImage: blogAdsImage,
     tags: ["Meta Ads", "Google Ads", "Lead Generation", "CRO & CAC"],
     audience: "Growth managers, performance marketers, sales leaders, and companies hiring for measurable acquisition ownership.",
     tools: ["Meta Ads Manager", "Google Ads", "GA4", "Google Tag Manager", "CRM pipeline reports"],
@@ -555,7 +559,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "4 min read",
     publishedDate: "August, 2026",
     publishedDateISO: "2026-08-01",
-    coverImage: "/src/assets/images/blog_b2b_brand_positioning_1792385872838.jpg",
+    coverImage: blogBrandImage,
     tags: ["B2B Branding", "Market Strategy", "Client Retention", "Outreach"],
     audience: "B2B founders, commercial teams, brand managers, and employers assessing strategic communication and client growth skills.",
     tools: ["Customer interviews", "Competitive messaging matrix", "CRM", "LinkedIn", "Pitch decks"],
@@ -616,7 +620,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "5 min read",
     publishedDate: "July, 2026",
     publishedDateISO: "2026-07-01",
-    coverImage: "/src/assets/images/education_marketing_campaign_1792384748730.jpg",
+    coverImage: educationImage,
     tags: ["Higher Education", "Student Storytelling", "Content Strategy", "Conversion Funnels"],
     audience: "Education marketers, admissions teams, content strategists, and employers evaluating research-led audience communication.",
     tools: ["Meta Business Suite", "Google Search Console", "GA4", "Content calendar", "CRM/admissions reports"],
