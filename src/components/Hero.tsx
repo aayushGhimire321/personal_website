@@ -49,7 +49,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
             }`} style={{ textWrap: 'balance' }}>
               {isNepali 
                 ? `${t('hero.headline1')} — ${t('hero.headline2')}`
-                : 'Driving measurable business growth through performance marketing & brand experiences.'}
+                : 'Aayush Ghimire — Digital Marketing Executive & Brand Strategist in Kathmandu.'}
             </h1>
 
             {/* Lead Narrative */}
@@ -165,7 +165,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
               <div className="relative aspect-square w-full overflow-hidden">
                 <img
                   src={aayushPortrait}
-                  alt="Aayush Ghimire - Digital Marketing Executive"
+                  alt="Aayush Ghimire, Digital Marketing Executive and Brand Strategist in Kathmandu"
                   className="w-full h-full object-cover object-top transition-transform duration-500 hover:scale-102"
                   referrerPolicy="no-referrer"
                   loading="eager"
