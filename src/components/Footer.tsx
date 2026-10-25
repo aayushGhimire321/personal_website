@@ -1,14 +1,13 @@
 import React from 'react';
-import { ArrowUp, Sliders, Linkedin, Instagram, Facebook } from 'lucide-react';
+import { ArrowUp, Linkedin, Instagram, Facebook } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 import { useTheme } from '../context/ThemeContext';
 
 interface FooterProps {
-  onOpenSeoStudio: () => void;
   onOpenResume: () => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ onOpenSeoStudio, onOpenResume }) => {
+export const Footer: React.FC<FooterProps> = ({ onOpenResume }) => {
   const { isDark } = useTheme();
 
   const scrollToTop = () => {
@@ -32,16 +31,6 @@ export const Footer: React.FC<FooterProps> = ({ onOpenSeoStudio, onOpenResume })
               Digital Marketing Executive & Brand Strategist based in Kathmandu, Nepal. Focused on data-driven growth, technical SEO, and conversion-engineered digital experiences.
             </p>
             <div className="flex items-center gap-2 pt-2 text-xs">
-              <button
-                onClick={onOpenSeoStudio}
-                className={`font-semibold flex items-center gap-1 transition-colors cursor-pointer ${
-                  isDark ? 'text-amber-400 hover:text-amber-300' : 'text-amber-700 hover:text-amber-800'
-                }`}
-              >
-                <Sliders className="w-3.5 h-3.5" />
-                Open SEO Performance Studio
-              </button>
-              <span aria-hidden="true" className={isDark ? 'text-neutral-700' : 'text-slate-300'}>·</span>
               <button
                 onClick={onOpenResume}
                 className={`transition-colors cursor-pointer ${
@@ -120,4 +109,3 @@ export const Footer: React.FC<FooterProps> = ({ onOpenSeoStudio, onOpenResume })
     </footer>
   );
 };
-

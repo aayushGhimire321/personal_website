@@ -19,7 +19,6 @@ export const TRANSLATIONS: Translations = {
   'nav.blog': { en: 'Blog', ne: 'लेख तथा विचार' },
   'nav.contact': { en: 'Contact', ne: 'सम्पर्क' },
   'nav.viewCv': { en: 'View CV', ne: 'बायोडाटा (CV)' },
-  'nav.seoStudio': { en: 'SEO Studio', ne: 'एसईओ स्टुडियो' },
   'nav.letsTalk': { en: "Let's Talk", ne: 'सल्लाह गरौं' },
 
   // Hero Section

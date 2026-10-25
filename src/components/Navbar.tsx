@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { Sliders, Menu, X, ArrowUpRight, Sun, Moon, Languages } from 'lucide-react';
+import { Menu, X, ArrowUpRight, Sun, Moon, Languages } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 import { useLanguage } from '../context/LanguageContext';
 
 interface NavbarProps {
-  onOpenSeoStudio: () => void;
   onOpenResume: () => void;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ onOpenSeoStudio, onOpenResume }) => {
+export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { theme, toggleTheme, isDark } = useTheme();
@@ -73,7 +72,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSeoStudio, onOpenResume })
             ))}
           </nav>
 
-          {/* Zone 3: Primary actions (Language Switch + Theme Switch + SEO Studio + Hire CTA) */}
+          {/* Zone 3: Primary actions (Language Switch + Theme Switch + Hire CTA) */}
           <div className="hidden md:flex items-center gap-2.5 shrink-0">
             {/* Language Toggle Switch (EN / नेपाली) */}
             <button
@@ -131,19 +130,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSeoStudio, onOpenResume })
               {t('nav.viewCv')}
             </button>
 
-            <button
-              onClick={onOpenSeoStudio}
-              className={`px-3.5 py-2 text-xs font-medium border rounded-lg transition-colors flex items-center gap-1.5 whitespace-nowrap shrink-0 cursor-pointer ${
-                isDark
-                  ? 'text-amber-300 bg-amber-400/10 hover:bg-amber-400/20 border-amber-400/30'
-                  : 'text-amber-900 bg-amber-50 hover:bg-amber-100 border-amber-300 font-semibold'
-              }`}
-              title="Open SEO Command Center & Core Web Vitals Audit"
-            >
-              <Sliders className="w-3.5 h-3.5 text-amber-500" />
-              {t('nav.seoStudio')}
-            </button>
-
             <a
               href="#contact"
               className={`px-4 py-2 text-xs font-semibold rounded-lg transition-colors whitespace-nowrap shrink-0 flex items-center gap-1 shadow-xs ${
@@ -184,18 +170,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSeoStudio, onOpenResume })
               }`}
             >
               {isDark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
-            </button>
-            <button
-              onClick={onOpenSeoStudio}
-              className={`p-2 border rounded-lg ${
-                isDark
-                  ? 'text-amber-400 bg-neutral-900 border-neutral-800'
-                  : 'text-amber-800 bg-amber-50 border-amber-300'
-              }`}
-              title="SEO Studio"
-              aria-label="Open SEO Studio"
-            >
-              <Sliders className="w-4 h-4" />
             </button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -280,20 +254,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSeoStudio, onOpenResume })
             >
               {t('nav.viewCv')}
             </button>
-            <button
-              onClick={() => {
-                setMobileMenuOpen(false);
-                onOpenSeoStudio();
-              }}
-              className={`w-full py-2.5 text-xs font-semibold border rounded-lg text-center flex items-center justify-center gap-1.5 ${
-                isDark
-                  ? 'text-amber-400 bg-amber-400/10 border-amber-400/20'
-                  : 'text-amber-900 bg-amber-50 border-amber-300'
-              }`}
-            >
-              <Sliders className="w-3.5 h-3.5" />
-              {t('nav.seoStudio')}
-            </button>
             <a
               href="#contact"
               onClick={() => setMobileMenuOpen(false)}
@@ -311,4 +271,3 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSeoStudio, onOpenResume })
     </header>
   );
 };
-

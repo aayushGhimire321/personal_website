@@ -1,7 +1,6 @@
 import React from 'react';
 import { 
   ArrowRight, 
-  Sliders, 
   FileDown, 
   Mail, 
   Phone, 
@@ -19,11 +18,10 @@ import aayushPortrait from "../assets/images/aayush_potrait.jpg";
 
 
 interface HeroProps {
-  onOpenSeoStudio: () => void;
   onOpenResume: () => void;
 }
 
-export const Hero: React.FC<HeroProps> = ({ onOpenSeoStudio, onOpenResume }) => {
+export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
   const { isDark } = useTheme();
   const { t, isNepali } = useLanguage();
 
@@ -111,18 +109,6 @@ export const Hero: React.FC<HeroProps> = ({ onOpenSeoStudio, onOpenResume }) => 
                 {t('hero.ctaResume')}
               </button>
 
-              <button
-                onClick={onOpenSeoStudio}
-                className={`px-4 py-3 text-sm font-semibold border rounded-lg transition-colors flex items-center gap-2 cursor-pointer ${
-                  isDark
-                    ? 'text-amber-300 bg-amber-400/10 hover:bg-amber-400/20 border-amber-400/25'
-                    : 'text-amber-900 bg-amber-50 hover:bg-amber-100 border-amber-300'
-                }`}
-                title="Launch Live SEO Management Suite"
-              >
-                <Sliders className="w-4 h-4 text-amber-500" />
-                {t('nav.seoStudio')}
-              </button>
             </div>
 
             {/* Social Verification Bar */}
@@ -282,4 +268,3 @@ export const Hero: React.FC<HeroProps> = ({ onOpenSeoStudio, onOpenResume }) => 
     </section>
   );
 };
-
