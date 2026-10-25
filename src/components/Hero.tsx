@@ -174,7 +174,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenSeoStudio, onOpenResume }) => 
             }`}>
               <div className="relative aspect-square w-full overflow-hidden">
                 <img
-                  src="C:\Users\aghim\Downloads\aayush-portfolio\src\assets\images\aayush_potrait.jpg"
+                  src="C:/Users/aghim/Downloads/aayush-portfolio/src/assets/images/aayush_potrait.jpg"
                   alt="Aayush Ghimire - Digital Marketing Executive"
                   className="w-full h-full object-cover object-top transition-transform duration-500 hover:scale-102"
                   referrerPolicy="no-referrer"
