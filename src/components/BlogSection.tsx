@@ -20,6 +20,7 @@ import { BLOG_POSTS, BlogPost, PERSONAL_INFO } from '../data/portfolioData';
 import { useTheme } from '../context/ThemeContext';
 import { useLanguage } from '../context/LanguageContext';
 
+
 export const BlogSection: React.FC = () => {
   const { isDark } = useTheme();
   const { t } = useLanguage();
